@@ -4,7 +4,7 @@
 %------------------------
 
 \documentclass[11pt,letterpaper]{article}
-
+\usepackage{fontspec}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -16,7 +16,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+\usepackage{iftex}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -42,8 +42,10 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure PDF is machine readable/ATS parsable
-\pdfgentounicode=1
+% Ensure PDF is machine readable/ATS parsable (pdfTeX only, and only if available)
+\ifPDFTeX
+  \IfFileExists{glyphtounicode.tex}{\input{glyphtounicode}\pdfgentounicode=1}{}
+\fi
 
 %-------------------------
 % Custom commands
@@ -216,7 +218,7 @@
 \section{Technical Skills}
 \resumeSubHeadingListStart
   \small{\item{
-    \textbf{Frontend}{: React, Next.js, Vue.js, TypeScript, JavaScript ES6+, Tailwind CSS, SASS/SCSS, Styled Components, Material UI, ChakraUI, HTML5, CSS3} \\
+    \textbf{Frontend}{: React, Next.js, Vue.js, TypeScript, JavaScript ES6+, Tailwind CSS, SASS/SCSS, Styled Components, Material UI, ChakraUI, HTML5, CSS3, React Testing Library, Cypress, Enzyme, Jest} \\
     \textbf{Backend}{: Node.js, NestJS, PHP (Laravel, Symfony, Lumen, CodeIgniter, Kohana), GraphQL, Apollo, REST APIs, Express.js} \\
     \textbf{Databases}{: MySQL, PostgreSQL, MongoDB, Redis, Oracle, SQL Server} \\
     \textbf{DevOps \& Tools}{: Docker, Kubernetes, Git, GitHub Copilot, Claude Code, Azure IoT, Apache Kafka, RabbitMQ, Webpack, Nginx, AWS} \\
@@ -227,12 +229,21 @@
 
 %-----------CERTIFICATIONS-----------
 \section{Certifications \& Training}
-\resumeItemListStart
-  \resumeItem{Machine Learning with Python --- Universidad Cenfotec (40 hours)}
-  \resumeItem{Intensive iOS Application Development --- Universidad Cenfotec (40 hours)}
-  \resumeItem{Introduction to Android Application Development --- Motorola de Venezuela / CAVEDATOS}
-  \resumeItem{Intermediate Java Training --- Intertec International, Costa Rica}
-  \resumeItem{Google Webmaster Tools Seminar --- Google Inc. / UNITEC, Venezuela}
+    \resumeItemListStart
+    \resumeItem{Generative AI and Smart Automation with n8n --- SmartData}
+    \resumeItem{Time Series in Python --- PROMIDAT Latinoamericano}
+    \resumeItem{Web Mining --- PROMIDAT Latinoamericano}
+    \resumeItem{Deep Learning in Python --- PROMIDAT Latinoamericano}
+    \resumeItem{Advanced Analytic Methods --- PROMDIAT Latinoamericano}
+    \resumeItem{Data Visualization --- PROMIDAT Latinoamericano}
+    \resumeItem{Supervised Learning in Python --- PROMIDAT Latinoamericano}
+    \resumeItem{Object Oriented Programming in Python --- PROMIDAT Latinoamericano} 
+    \resumeItem{Unsupervised Learning in Python --- PROMIDAT Latinoamericano}
+    \resumeItem{Machine Learning with Python --- Universidad Cenfotec (40 hours)}
+    \resumeItem{Intensive iOS Application Development --- Universidad Cenfotec (40 hours)}
+    \resumeItem{Introduction to Android Application Development --- Motorola de Venezuela / CAVEDATOS}
+    \resumeItem{Intermediate Java Training --- Intertec International, Costa Rica}
+    \resumeItem{Google Webmaster Tools Seminar --- Google Inc. / UNITEC, Venezuela}
 \resumeItemListEnd
 
 %-----------LANGUAGES-----------
