@@ -1,0 +1,242 @@
+%-------------------------
+% Harvard-style Resume in LaTeX
+% Based on the classic "Harvard OCS" resume layout
+%------------------------
+
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeEducationHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Daniel Antonio Peraza Cedrez} \\ \vspace{1pt}
+    \small Heredia, Costa Rica $|$ (+506) 6056-2767 $|$
+    \href{mailto:danielperaza@gmail.com}{danielperaza@gmail.com} $|$
+    \href{https://linkedin.com/in/daniel-peraza}{linkedin.com/in/daniel-peraza}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{Senior Frontend Engineer with 15+ years of experience building high-performance web applications for global brands including Nordstrom, AbbVie, Indeed, and Wells Fargo. Deep expertise in React, TypeScript, Next.js, and Micro-Frontend architecture. Proven track record leading engineering teams, designing scalable Design Systems, and delivering production-ready e-commerce and SaaS solutions. Experienced with AI-assisted development tools including Claude Code and GitHub Copilot.}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeEducationHeading
+    {Universidad de Carabobo}{Valencia, Venezuela}
+    {Bachelor's Degree in Computer Science (Licenciado en Computaci\'on)}{Graduated}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Professional Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Confiz}{Remote}
+    {Senior Frontend Engineer -- Nordstrom (CAT Team)}{May 2025 -- Present}
+    \resumeItemListStart
+      \resumeItem{Engineer and maintain frontend applications supporting Nordstrom's e-commerce platform, including Appointments Booking}
+      \resumeItem{Architect scalable UI solutions using React, RESTful APIs, Monorepos, and Micro-Frontend architecture}
+      \resumeItem{Partner cross-functionally with product and backend teams to deliver features aligned with business priorities}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Exit83}{Remote}
+    {Senior Frontend Engineer -- RTD (Dosimeter Display App)}{November 2025 -- February 2026}
+    \resumeItemListStart
+      \resumeItem{Built a real-time Dosimeter Display Application on Next.js using Azure IoT and Server-Sent Events (SSE) for live data streaming}
+      \resumeItem{Implemented responsive UI with React, Tailwind CSS, and TypeScript, including unit testing with React Testing Library}
+      \resumeItem{Leveraged AI-assisted development tools including Claude Code and GitHub Copilot to accelerate delivery}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Shrine Development}{Remote}
+    {Senior Fullstack Engineer -- AbbVie (Loyalty Program Design System)}{February 2024 -- January 2025}
+    \resumeItemListStart
+      \resumeItem{Maintained and extended AbbVie's Design System for their Loyalty Program using TypeScript, ReactJS, GraphQL, and ChakraUI}
+      \resumeItem{Collaborated with design and product teams via Figma to ensure consistent UI/UX implementation across the platform}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Upwork Inc.}{Remote}
+    {Senior Frontend Developer -- AnyHire}{February 2023 -- December 2023}
+    \resumeItemListStart
+      \resumeItem{Maintained and developed new features for the AnyHire platform using VueJS, JavaScript ES6, and GraphQL}
+      \resumeItem{Crafted consistent UI components using design systems, SCSS, and CSS-in-JS aligned with product specifications}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Bydrec Inc.}{Remote}
+    {Senior Frontend Engineer -- On24.com}{April 2022 -- January 2023}
+    \resumeItemListStart
+      \resumeItem{Led implementation of a new React Design System, migrating existing UI components from legacy codebase to React}
+      \resumeItem{Developed new features and enforced quality through Cypress end-to-end testing}
+      \resumeItem{Stack: ReactJS, Material UI, Styled Components, React Hooks, RESTful APIs, JavaScript}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Retail Ecommerce Ventures}{Remote}
+    {Tech Lead $\rightarrow$ Senior Software Engineer}{2021 -- 2022}
+    \resumeItemListStart
+      \resumeItem{Promoted to Tech Lead for the Brahms product --- a Shopify replacement --- responsible for architecting and building the Admin Panel UI}
+      \resumeItem{Maintained internal e-commerce systems serving brands including RadioShack, Modell's, Stein Mart, and Pier1}
+      \resumeItem{Stack: ReactJS, Styled Components, SASS, MaterialUI, NestJS, Node.js, Docker, RabbitMQ, Microservice Architecture}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {InAll Media Inc.}{Remote}
+    {Tech Lead -- Indeed}{2020 -- 2021}
+    \resumeItemListStart
+      \resumeItem{Led a team of 5--7 engineers in modernizing a legacy CakePHP monolith for Indeed, defining architecture and migration strategy}
+      \resumeItem{Coordinated technical planning, code reviews, and sprint execution in an Agile/Scrum environment}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Log(N) LLC}{Remote}
+    {Senior Software Engineer -- Revinate Inc.}{2020}
+    \resumeItemListStart
+      \resumeItem{Developed and maintained an internal data integration tool using Apollo GraphQL, Node.js, and ReactJS with Apache Kafka}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Avantica Technologies Inc.}{San Jos\'e, Costa Rica}
+    {Senior Frontend Engineer -- Appetize Technologies Inc.}{2017 -- 2019}
+    \resumeItemListStart
+      \resumeItem{Developed and maintained a SaaS Point of Sale platform for retail and corporate clients using React, PHP 7, and Kubernetes}
+      \resumeItem{Supported iOS developers in backend bug fixing and REST API integrations using Objective-C}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------ADDITIONAL EXPERIENCE-----------
+\section{Additional Experience (2008 -- 2017)}
+\resumeItemListStart
+  \resumeItem{\textbf{Freelance Consultant} (2017--2018) --- Engineered software solutions for Netmidas Inc., Mind Geek, and US/Canada clients. Stack: PHP 7, Symfony, Node.js, MySQL, WordPress}
+  \resumeItem{\textbf{Global Alliance Services CR} (2017) --- Developed and maintained company web applications as Senior PHP Developer}
+  \resumeItem{\textbf{Ex2 Outcoding} (2016--2017) --- Built backend features for Publishers Clearing House (NY) online games using Laravel as Senior PHP Developer}
+  \resumeItem{\textbf{The Hangar Interactive} (2016) --- Delivered the official website for Watford FC (English Premier League) on Drupal 8 and Acquia Cloud}
+  \resumeItem{\textbf{SDC Media Inc.} (2015--2016) --- Maintained and extended a social networking platform on PHP, MySQL, and AWS}
+  \resumeItem{\textbf{Intertec International / Wells Fargo} (2014--2015) --- Maintained a legacy Configuration Management application using Kohana and Oracle}
+  \resumeItem{\textbf{Castro Group / navicu.com} (2014) --- Assembled and led a development team to build navicu.com using Symfony 2 and Knockout.js as Project Lead}
+  \resumeItem{\textbf{Indexa IT Solutions} (2012--2013) --- Managed developers and designers delivering custom web projects in Agile/Scrum as Project Manager}
+  \resumeItem{\textbf{Espacio Digital / Indexa IT} (2008--2012) --- Built customized web applications for local clients as Full Stack Web Developer}
+\resumeItemListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\resumeSubHeadingListStart
+  \small{\item{
+    \textbf{Frontend}{: React, Next.js, Vue.js, TypeScript, JavaScript ES6+, Tailwind CSS, SASS/SCSS, Styled Components, Material UI, ChakraUI, HTML5, CSS3} \\
+    \textbf{Backend}{: Node.js, NestJS, PHP (Laravel, Symfony, Lumen, CodeIgniter, Kohana), GraphQL, Apollo, REST APIs, Express.js} \\
+    \textbf{Databases}{: MySQL, PostgreSQL, MongoDB, Redis, Oracle, SQL Server} \\
+    \textbf{DevOps \& Tools}{: Docker, Kubernetes, Git, GitHub Copilot, Claude Code, Azure IoT, Apache Kafka, RabbitMQ, Webpack, Nginx, AWS} \\
+    \textbf{Testing}{: Jest, React Testing Library, Cypress, Enzyme} \\
+    \textbf{Methodologies}{: Agile, Scrum, Micro-Frontend Architecture, Microservice Architecture, Design Systems, Monorepos}
+  }}
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications \& Training}
+\resumeItemListStart
+  \resumeItem{Machine Learning with Python --- Universidad Cenfotec (40 hours)}
+  \resumeItem{Intensive iOS Application Development --- Universidad Cenfotec (40 hours)}
+  \resumeItem{Introduction to Android Application Development --- Motorola de Venezuela / CAVEDATOS}
+  \resumeItem{Intermediate Java Training --- Intertec International, Costa Rica}
+  \resumeItem{Google Webmaster Tools Seminar --- Google Inc. / UNITEC, Venezuela}
+\resumeItemListEnd
+
+%-----------LANGUAGES-----------
+\section{Languages}
+\small{\textbf{Spanish:} Native $|$ \textbf{English:} Advanced (B2--C1)}
+
+\end{document}
